@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- Button icon fontawesome: my_project/Web_development_tools/font_awesome_icons didnt work -->
+    <!-- all.min.css worked -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+    <title>Music Player</title>
+</head>
+
+<body>
+    <h1 id="Page_title">요즘 자주 듣는 곡들</h1>
+
+    <div class="music-container"> 
+        <!-- 
+            Class play is added here to add rotation to album image,
+             So the play class need to be appear when play button is pressed.
+        -->
+        <div class="music-info">
+            <!--
+                This div section will hold the information on
+                music description 
+            -->
+            <h4 id="music_title">Press next song</h4>
+            <div class="progress-container">
+                <div class="progress"></div> <!-- This will be filled dynamically by js -->
+            </div>
+        </div>
+
+
+        <!-- 곡 넣기 -->
+        <audio src="" id="audio"></audio>
+        <div class="album-container">
+            <img src="/music_albums/Press next song.jpg" alt="music-album" id="album">
+        </div>
+
+        <div class="navigation">
+            <button id="prev" class="action-btn">
+                <i class="fas fa-backward"></i> <!-- Font awesome class for icon -->
+            </button>
+            <button id="play" class="action-btn action-btn-big">
+                <i class="fas fa-play"></i> <!-- Font awesome class for icon -->
+            </button>
+            <button id="next" class="action-btn">
+                <i class="fas fa-forward"></i> <!-- Font awesome class for icon -->
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
